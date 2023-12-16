@@ -1,0 +1,29 @@
+Reading netlist file: "C:\Users\matt\Documents\FPGA\vid80-4a\impl\gwsynthesis\vid80.vg"
+Parsing netlist file "C:\Users\matt\Documents\FPGA\vid80-4a\impl\gwsynthesis\vid80.vg" completed
+Processing netlist completed
+Reading constraint file: "C:\Users\matt\Documents\FPGA\vid80-4a\src\nano-9k.cst"
+Physical Constraint parsed completed
+Running placement......
+[10%] Placement Phase 0 completed
+[20%] Placement Phase 1 completed
+[30%] Placement Phase 2 completed
+[50%] Placement Phase 3 completed
+Running routing......
+[60%] Routing Phase 0 completed
+[70%] Routing Phase 1 completed
+[80%] Routing Phase 2 completed
+[90%] Routing Phase 3 completed
+Running timing analysis......
+[95%] Timing analysis completed
+Placement and routing completed
+Bitstream generation in progress......
+Bitstream generation completed
+Running power analysis......
+[100%] Power analysis completed
+Generate file "C:\Users\matt\Documents\FPGA\vid80-4a\impl\pnr\vid80.power.html" completed
+Generate file "C:\Users\matt\Documents\FPGA\vid80-4a\impl\pnr\vid80.pin.html" completed
+Generate file "C:\Users\matt\Documents\FPGA\vid80-4a\impl\pnr\vid80.rpt.html" completed
+Generate file "C:\Users\matt\Documents\FPGA\vid80-4a\impl\pnr\vid80.rpt.txt" completed
+Generate file "C:\Users\matt\Documents\FPGA\vid80-4a\impl\pnr\vid80.tr.html" completed
+Sat Aug 13 15:32:54 2022
+
