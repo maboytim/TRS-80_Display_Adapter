@@ -1,0 +1,10 @@
+-d C:\Users\matt\Documents\FPGA\vid80-6000\impl\gwsynthesis\vid80.vg
+-p GW1NR-9C-QFN88P-6
+-pn GW1NR-LV9QN88PC6/I5
+-cst C:\Users\matt\Documents\FPGA\vid80-6000\src\nano-9k.cst
+-cfg C:\Users\matt\Documents\FPGA\vid80-6000\impl\pnr\device.cfg
+-bit
+-tr
+-ph
+-timing
+-cst_error

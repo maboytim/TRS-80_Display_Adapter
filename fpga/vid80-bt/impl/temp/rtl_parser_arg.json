@@ -1,0 +1,73 @@
+{
+ "Device" : "GW1NR-9C",
+ "Files" : [
+  {
+   "Path" : "C:/Users/matt/Documents/FPGA/vid80-6000/src/BUFG.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/matt/Documents/FPGA/vid80-6000/src/gowin_clkdiv/gowin_clkdiv.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/matt/Documents/FPGA/vid80-6000/src/gowin_dpb/gowin_dpb.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/matt/Documents/FPGA/vid80-6000/src/gowin_rpll/gowin_rpll.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/matt/Documents/FPGA/vid80-6000/src/hdmi/audio_clock_regeneration_packet.sv",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/matt/Documents/FPGA/vid80-6000/src/hdmi/audio_info_frame.sv",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/matt/Documents/FPGA/vid80-6000/src/hdmi/audio_sample_packet.sv",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/matt/Documents/FPGA/vid80-6000/src/hdmi/auxiliary_video_information_info_frame.sv",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/matt/Documents/FPGA/vid80-6000/src/hdmi/hdmi.sv",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/matt/Documents/FPGA/vid80-6000/src/hdmi/packet_assembler.sv",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/matt/Documents/FPGA/vid80-6000/src/hdmi/packet_picker.sv",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/matt/Documents/FPGA/vid80-6000/src/hdmi/serializer.sv",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/matt/Documents/FPGA/vid80-6000/src/hdmi/source_product_description_info_frame.sv",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/matt/Documents/FPGA/vid80-6000/src/hdmi/tmds_channel.sv",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/matt/Documents/FPGA/vid80-6000/src/top.v",
+   "Type" : "verilog"
+  }
+ ],
+ "IncludePath" : [
+
+ ],
+ "LoopLimit" : 2000,
+ "ResultFile" : "C:/Users/matt/Documents/FPGA/vid80-6000/impl/temp/rtl_parser.result",
+ "Top" : "",
+ "VerilogStd" : "sysv",
+ "VhdlStd" : "vhdl_93"
+}
