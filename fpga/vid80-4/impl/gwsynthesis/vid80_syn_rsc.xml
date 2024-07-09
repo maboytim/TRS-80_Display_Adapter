@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Module name="top" Register="162" Alu="119" Lut="129">
-    <SubModule name="vgaclkpll"/>
-    <SubModule name="clkdiv"/>
-    <SubModule name="hdmi" Register="45" Alu="18" Lut="52">
-        <SubModule name="true_hdmi_output.packet_picker" Register="13" Lut="18"/>
-        <SubModule name="true_hdmi_output.packet_assembler" Register="45" Alu="4" Lut="138"/>
-        <SubModule name="tmds_gen[0].tmds_channel" Register="14" Alu="16" Lut="71"/>
-        <SubModule name="tmds_gen[1].tmds_channel" Register="14" Alu="16" Lut="59"/>
-        <SubModule name="tmds_gen[2].tmds_channel" Register="14" Alu="16" Lut="59"/>
-        <SubModule name="serializer"/>
-    </SubModule>
-    <SubModule name="display_ram" Register="2" Lut="9" Bsram="10"/>
+<Module name="top" Register="171" Alu="119" Lut="151">
+ <SubModule name="vgaclkpll"/>
+ <SubModule name="clkdiv"/>
+ <SubModule name="hdmi" Register="53" Alu="18" Lut="50">
+  <SubModule name="true_hdmi_output.packet_picker" Register="13" Lut="17"/>
+  <SubModule name="true_hdmi_output.packet_assembler" Register="45" Alu="4" Lut="137"/>
+  <SubModule name="tmds_gen[0].tmds_channel" Register="14" Alu="11" Lut="70"/>
+  <SubModule name="tmds_gen[1].tmds_channel" Register="14" Alu="17" Lut="89"/>
+  <SubModule name="tmds_gen[2].tmds_channel" Register="14" Alu="13" Lut="66"/>
+  <SubModule name="serializer"/>
+ </SubModule>
+ <SubModule name="display_ram" Register="2" Lut="9" Bsram="10"/>
 </Module>

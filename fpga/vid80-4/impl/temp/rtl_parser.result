@@ -9,7 +9,7 @@
   "SubInsts" : [
    {
     "InstFile" : "C:/Users/matt/Documents/FPGA/vid80-4a/src/top.v",
-    "InstLine" : 222,
+    "InstLine" : 225,
     "InstName" : "dotclk_bufg",
     "ModuleFile" : "C:/Users/matt/Documents/FPGA/vid80-4a/src/BUFG.v",
     "ModuleLine" : 3,
@@ -17,7 +17,7 @@
    },
    {
     "InstFile" : "C:/Users/matt/Documents/FPGA/vid80-4a/src/top.v",
-    "InstLine" : 33,
+    "InstLine" : 32,
     "InstName" : "vgaclkpll",
     "ModuleFile" : "C:/Users/matt/Documents/FPGA/vid80-4a/src/gowin_rpll/gowin_rpll.v",
     "ModuleLine" : 9,
@@ -25,7 +25,7 @@
    },
    {
     "InstFile" : "C:/Users/matt/Documents/FPGA/vid80-4a/src/top.v",
-    "InstLine" : 41,
+    "InstLine" : 40,
     "InstName" : "clkdiv",
     "ModuleFile" : "C:/Users/matt/Documents/FPGA/vid80-4a/src/gowin_clkdiv/gowin_clkdiv.v",
     "ModuleLine" : 9,
@@ -33,7 +33,7 @@
    },
    {
     "InstFile" : "C:/Users/matt/Documents/FPGA/vid80-4a/src/top.v",
-    "InstLine" : 100,
+    "InstLine" : 103,
     "InstName" : "hdmi",
     "ModuleFile" : "C:/Users/matt/Documents/FPGA/vid80-4a/src/hdmi/hdmi.sv",
     "ModuleLine" : 4,
@@ -133,7 +133,7 @@
    },
    {
     "InstFile" : "C:/Users/matt/Documents/FPGA/vid80-4a/src/top.v",
-    "InstLine" : 336,
+    "InstLine" : 338,
     "InstName" : "display_ram",
     "ModuleFile" : "C:/Users/matt/Documents/FPGA/vid80-4a/src/gowin_dpb/gowin_dpb.v",
     "ModuleLine" : 9,

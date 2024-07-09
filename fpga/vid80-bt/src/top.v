@@ -16,6 +16,7 @@ module top(
    output gpio_34,
    output gpio_40,
    input test_in,
+   input [7:0] test8,
 
    // HDMI
    output [2:0] tmds_p,
@@ -57,10 +58,11 @@ logic vga_rgb;
 
 logic [15:0] audio_sample_word [1:0] = '{16'd0, 16'd0};
 
-logic [23:0] rgb = 24'd0;
-logic [23:0] rgb_screen_color = 24'hffffff;  // White
-//logic [23:0] rgb_screen_color = 24'h33ff33;  // Green - from trs-io {51, 255, 51}
-//logic [23:0] rgb_screen_color = 24'hffb100;  // Amber - from trs-io {255, 177, 0}}
+reg [23:0] rgb = 24'h000000;
+wire [23:0] rgb_screen_color = test8[7:6] == 2'b00 ? 24'hffcc00 :  // Amber
+                               test8[7:6] == 2'b01 ? 24'h33ff33 :  // Green - from trs-io {51, 255, 51}
+                               test8[7:6] == 2'b10 ? 24'hffb100 :  // Amber - from trs-io {255, 177, 0}
+                                                     24'hffffff ;  // White
 logic [9:0] cx, frame_width, screen_width;
 logic [9:0] cy, frame_height, screen_height;
 
@@ -115,7 +117,7 @@ reg [1:0] hsync_in_dly;
 always @ (posedge vgaclk_x5)
 begin
    hsync_in_dly <= { hsync_in_dly[0], hsync_in }; // no glitch suppression
-   //hsync_in_dly  <= { hsync_in_dly[0] , (^hsync_in_dly ) ? hsync_in_dly[0] : hsync_in }; // glitch suppression
+   //hsync_in_dly <= { hsync_in_dly[0], (^hsync_in_dly) ? hsync_in_dly[0] : hsync_in }; // glitch suppression
 end
 
 

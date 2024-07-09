@@ -16,6 +16,7 @@ module top(
    output gpio_34,
    output gpio_40,
    input test_in,
+   input [7:0] test8,
 
    // HDMI
    output [2:0] tmds_p,
@@ -23,8 +24,6 @@ module top(
    output tmds_clock_p,
    output tmds_clock_n
 );
-
-//wire mode80 = test_in;
 
 
 // 126MHz clock
@@ -78,17 +77,21 @@ logic vga_rgb;
 
 logic [15:0] audio_sample_word [1:0] = '{16'd0, 16'd0};
 
-logic [23:0] rgb = 24'd0;
-logic [23:0] rgb_screen_color = 24'hffffff;  // White
-//logic [23:0] rgb_screen_color = 24'h33ff33;  // Green - from trs-io {51, 255, 51}
-//logic [23:0] rgb_screen_color = 24'hffb100;  // Amber - from trs-io {255, 177, 0}}
+reg [23:0] rgb = 24'h000000;
+wire [23:0] rgb_screen_color = test8[7:6] == 2'b00 ? 24'hffcc00 :  // Amber
+                               test8[7:6] == 2'b01 ? 24'h33ff33 :  // Green - from trs-io {51, 255, 51}
+                               test8[7:6] == 2'b10 ? 24'hffb100 :  // Amber - from trs-io {255, 177, 0}
+                                                     24'hffffff ;  // White
 logic [9:0] cx, frame_width, screen_width;
 logic [9:0] cy, frame_height, screen_height;
 
 always @(posedge vgaclk)
 begin
+  if(!sw[1] && (cx == 0 || cx == (screen_width - 1) || cy == 0 || cy == (screen_height - 1)))
+     rgb <= 24'h0000ff;
+  else
   if(mode80 ? 1'b1 : (cx >= 64 &&  cx < 576 && cy >=48 && cy < 432))
-     rgb <= vga_rgb ? rgb_screen_color : 24'b0;
+     rgb <= vga_rgb ? rgb_screen_color : 24'h000000;
   else
      rgb <= test_in ? 24'h404040 : 24'h000000;
 end
@@ -133,7 +136,7 @@ reg [1:0] hsync_in_dly;
 always @ (posedge vgaclk_x5)
 begin
    hsync_in_dly <= { hsync_in_dly[0], hsync_in }; // no glitch suppression
-   //hsync_in_dly  <= { hsync_in_dly[0] , (^hsync_in_dly ) ? hsync_in_dly[0] : hsync_in }; // glitch suppression
+   //hsync_in_dly <= { hsync_in_dly[0], (^hsync_in_dly) ? hsync_in_dly[0] : hsync_in }; // glitch suppression
 end
 
 
@@ -230,7 +233,6 @@ assign gpio_28 = dotclk;
 // Synchronize the hzync, vsync, and pixel signals to the recovered dotclk.
 // From observation hsync rises on the dotclk rising edge so sample with
 // falling, and vsync falls on the dotclock rising edge so sample with falling.
-// so sample them with the dotclk rising edge.
 
 reg [1:0] hsync_in_shr;
 reg [1:0] vsync_in_shr;
@@ -286,10 +288,10 @@ begin
    // the captured portion left/right.
    if(hsync_in_shr == 2'b01) // rising edge
    begin
-      hcnt_in <= mode80 ? -11'd136 : -11'd110;
+      hcnt_in <= mode80 ? -11'd135 : -11'd110;
       // If the counter modulo is right then once synced the counter will already
       // be transitioning to the sync count when the horizontal sync occurs.
-      hcheck <= (hcnt_in == mode80 ? -11'd137 : -11'd111);
+      hcheck <= (hcnt_in == mode80 ? (-11'd135 - 11'd1) : (-11'd110 - 11'd1));
    end
    else
    begin
@@ -300,10 +302,10 @@ begin
    // active portion of the display is captured.
    if(vsync_in_shr == 2'b10) // falling edge
    begin
-      vcnt_in <= mode80 ? -9'd22 : -9'd48;
+      vcnt_in <= mode80 ? -9'd23 : -9'd48;
       // If the counter modulo is right then once synced the counter will already
       // be at the sync count when the vertical sync occurs.
-      vcheck <= (vcnt_in == (mode80 ? -9'd22 : -9'd48));
+      vcheck <= (vcnt_in == (mode80 ? -9'd23 : -9'd48));
    end
    else
    begin

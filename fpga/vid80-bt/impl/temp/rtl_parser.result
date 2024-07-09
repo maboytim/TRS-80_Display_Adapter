@@ -9,7 +9,7 @@
   "SubInsts" : [
    {
     "InstFile" : "C:/Users/matt/Documents/FPGA/vid80-6000/src/top.v",
-    "InstLine" : 204,
+    "InstLine" : 206,
     "InstName" : "dotclk_bufg",
     "ModuleFile" : "C:/Users/matt/Documents/FPGA/vid80-6000/src/BUFG.v",
     "ModuleLine" : 3,
@@ -17,7 +17,7 @@
    },
    {
     "InstFile" : "C:/Users/matt/Documents/FPGA/vid80-6000/src/top.v",
-    "InstLine" : 38,
+    "InstLine" : 39,
     "InstName" : "vgaclkpll",
     "ModuleFile" : "C:/Users/matt/Documents/FPGA/vid80-6000/src/gowin_rpll/gowin_rpll.v",
     "ModuleLine" : 9,
@@ -25,7 +25,7 @@
    },
    {
     "InstFile" : "C:/Users/matt/Documents/FPGA/vid80-6000/src/top.v",
-    "InstLine" : 46,
+    "InstLine" : 47,
     "InstName" : "clkdiv",
     "ModuleFile" : "C:/Users/matt/Documents/FPGA/vid80-6000/src/gowin_clkdiv/gowin_clkdiv.v",
     "ModuleLine" : 9,
@@ -33,7 +33,7 @@
    },
    {
     "InstFile" : "C:/Users/matt/Documents/FPGA/vid80-6000/src/top.v",
-    "InstLine" : 80,
+    "InstLine" : 82,
     "InstName" : "hdmi",
     "ModuleFile" : "C:/Users/matt/Documents/FPGA/vid80-6000/src/hdmi/hdmi.sv",
     "ModuleLine" : 4,
@@ -133,7 +133,7 @@
    },
    {
     "InstFile" : "C:/Users/matt/Documents/FPGA/vid80-6000/src/top.v",
-    "InstLine" : 317,
+    "InstLine" : 319,
     "InstName" : "display_ram",
     "ModuleFile" : "C:/Users/matt/Documents/FPGA/vid80-6000/src/gowin_dpb/gowin_dpb.v",
     "ModuleLine" : 9,
