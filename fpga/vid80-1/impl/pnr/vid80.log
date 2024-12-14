@@ -1,0 +1,52 @@
+Reading netlist file: "C:\Users\matt\Documents\FPGA\vid80-1\impl\gwsynthesis\vid80.vg"
+Parsing netlist file "C:\Users\matt\Documents\FPGA\vid80-1\impl\gwsynthesis\vid80.vg" completed
+Processing netlist completed
+Reading constraint file: "C:\Users\matt\Documents\FPGA\vid80-1\src\nano-9k.cst"
+NOTE  (CT1146) : ignore SlewRate setting
+NOTE  (CT1146) : ignore SlewRate setting
+NOTE  (CT1146) : ignore SlewRate setting
+NOTE  (CT1146) : ignore SlewRate setting
+NOTE  (CT1146) : ignore SlewRate setting
+NOTE  (CT1146) : ignore SlewRate setting
+NOTE  (CT1146) : ignore SlewRate setting
+NOTE  (CT1146) : ignore SlewRate setting
+NOTE  (CT1146) : ignore SlewRate setting
+NOTE  (CT1146) : ignore SlewRate setting
+NOTE  (CT1146) : ignore SlewRate setting
+NOTE  (CT1146) : ignore SlewRate setting
+NOTE  (CT1146) : ignore SlewRate setting
+NOTE  (CT1146) : ignore SlewRate setting
+NOTE  (CT1146) : ignore SlewRate setting
+NOTE  (CT1146) : ignore SlewRate setting
+NOTE  (CT1146) : ignore SlewRate setting
+NOTE  (CT1146) : ignore SlewRate setting
+NOTE  (CT1146) : ignore SlewRate setting
+NOTE  (CT1146) : ignore SlewRate setting
+NOTE  (CT1146) : ignore SlewRate setting
+Physical Constraint parsed completed
+Running placement......
+[10%] Placement Phase 0 completed
+[20%] Placement Phase 1 completed
+[30%] Placement Phase 2 completed
+WARN  (TA1117) : Can't calculate clocks' relationship between: "adc_cnt[4]" and "clkdiv/clkdiv_inst/CLKOUT.default_gen_clk"
+WARN  (TA1117) : Can't calculate clocks' relationship between: "clkdiv/clkdiv_inst/CLKOUT.default_gen_clk" and "adc_cnt[4]"
+[50%] Placement Phase 3 completed
+Running routing......
+[60%] Routing Phase 0 completed
+[70%] Routing Phase 1 completed
+[80%] Routing Phase 2 completed
+[90%] Routing Phase 3 completed
+Running timing analysis......
+[95%] Timing analysis completed
+Placement and routing completed
+Bitstream generation in progress......
+Bitstream generation completed
+Running power analysis......
+[100%] Power analysis completed
+Generate file "C:\Users\matt\Documents\FPGA\vid80-1\impl\pnr\vid80.power.html" completed
+Generate file "C:\Users\matt\Documents\FPGA\vid80-1\impl\pnr\vid80.pin.html" completed
+Generate file "C:\Users\matt\Documents\FPGA\vid80-1\impl\pnr\vid80.rpt.html" completed
+Generate file "C:\Users\matt\Documents\FPGA\vid80-1\impl\pnr\vid80.rpt.txt" completed
+Generate file "C:\Users\matt\Documents\FPGA\vid80-1\impl\pnr\vid80.tr.html" completed
+Sat Dec 14 06:03:53 2024
+
