@@ -1,0 +1,4 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "TRS-IO-M1")(type "KiCad")(uri "${KIPRJMOD}/trs-io-m1.pretty")(options "")(descr ""))
+)
