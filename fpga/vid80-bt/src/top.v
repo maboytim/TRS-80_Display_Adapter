@@ -269,10 +269,10 @@ begin
    // the captured portion left/right.
    if(hsync_in_shr == 2'b01) // rising edge
    begin
-      hcnt_in <= -11'd143;
+      hcnt_in <= test8[0] ? -11'd143 : -11'd135;
       // If the counter modulo is right then once synced the counter will already
       // be transitioning to the sync count when the horizontal sync occurs.
-      hcheck <= (hcnt_in == -11'd144);
+      hcheck <= (hcnt_in == (test8[0] ? -11'd144 : -11'd136));
    end
    else
    begin

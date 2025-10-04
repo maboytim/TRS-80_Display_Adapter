@@ -57,7 +57,7 @@ WARN  (EX0211) : The output port "gpio_40" of module "top" has no driver, assign
 [5%] Running netlist conversion ...
 WARN  (CV0016) : Input uart_rx is unused("C:\Users\matt\Documents\FPGA\vid80-6000\src\top.v":8)
 WARN  (CV0016) : Input test_in is unused("C:\Users\matt\Documents\FPGA\vid80-6000\src\top.v":18)
-WARN  (CV0020) : Input test8[5:0] is unused("C:\Users\matt\Documents\FPGA\vid80-6000\src\top.v":19)
+WARN  (CV0020) : Input test8[5:1] is unused("C:\Users\matt\Documents\FPGA\vid80-6000\src\top.v":19)
 Running device independent optimization ...
 [10%] Optimizing Phase 0 completed
 [15%] Optimizing Phase 1 completed
